@@ -35,7 +35,7 @@ public class Main {
             } else {
                 System.out.print("Commercial ID: ");
             }
-            long id = input.nextLong();
+            String id = input.next();
             System.out.print("Address: ");
             String address = input.next();
             System.out.print("Telephone number: ");
