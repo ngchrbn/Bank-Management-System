@@ -16,14 +16,13 @@ public class Main {
         Scanner input = new Scanner(System.in);
         input.useDelimiter("\n");
         System.out.println("1. Add a new client\n" +
-                "2. List all Clients / Accounts\n" +
-                "3.Withdraw / Deposit\n" +
-                "4. Exit");
-        System.out.print("Your choice (1 - 4): ");
+                "2. Display existing clients\n" +
+                "3. Exit");
+        System.out.print("Your choice (1 - 3): ");
         int choice = input.nextInt();
-        while (choice != 1 && choice != 2 && choice != 3 && choice != 4) {
+        while (choice != 1 && choice != 2 && choice != 3) {
             System.out.println("Wrong Choice !");
-            System.out.print("Your choice (1 - 4): ");
+            System.out.print("Your choice (1 - 3): ");
             choice = input.nextInt();
         }
         if (choice == 1) {
@@ -54,29 +53,34 @@ public class Main {
             // Initialize client object
             Client client;
 
-            // Initialize client object
             if (accountType  == 1) {
                 // Initialize account object
                 account = new Account(accountNumber, balance);
-            } else {
+                if (clientType == 1) {
+                    // Initialize client object
+                    client = new Client(name, id, address, phone, account);
+                }
+                else {
+                    client = new CommercialClient(name, id, address, phone, account);
+                }
+                bank.addClient(client);
+            }
+            else {
                 account = new SpecialAccount(accountNumber, balance);
+                if (clientType == 1) {
+                    // Initialize client object
+                    client = new Client(name, id, address, phone, account);
+                }
+                else {
+                    client = new CommercialClient(name, id, address, phone, account);
+                }
+                bank.addClient(client);
             }
-            if (clientType == 1) {
-                // Initialize client object
-                client = new Client(name, id, address, phone, account);
-            } else {
-                client = new CommercialClient(name, id, address, phone, account);
-            }
-            bank.addClient(client);
             displayMenu();
         }
         else if (choice == 2){
             bank.displayClient();
             displayMenu();
-        }
-        else if (choice == 3) {
-            System.out.print("Enter Account number: ");
-            long accountNumber = input.nextLong();
         }
         else {
             System.exit(0);

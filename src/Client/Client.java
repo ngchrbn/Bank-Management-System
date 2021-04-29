@@ -81,7 +81,7 @@ public class Client {
      * Returns nationalID
      * @return nationalID
      */
-    public String getNationalID() {
+    public String getID() {
         return nationalID;
     }
 
@@ -117,7 +117,7 @@ public class Client {
     public String toString() {
         return "\nClient Type: Client" +
                 "\nName: " + getName() +
-                "\nNational ID: " + getNationalID() +
+                "\nNational ID: " + getID() +
                 "\nAddress: " + getAddress() +
                 "\nTelephone Number: " + getPhone();
     }
