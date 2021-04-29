@@ -43,7 +43,7 @@ public class Main {
             System.out.println("\nPlease Enter Account information below");
             int accountType = getAccountType();
             System.out.print("Account Number: ");
-            long accountNumber = input.nextLong();
+            String accountNumber = input.next();
             System.out.print("Account balance: ");
             double balance = input.nextDouble();
 

@@ -3,8 +3,8 @@ package Account;
 
 public class TestAccount {
     public static void main(String[] args) {
-        Account account = new Account(52464584, 500);
-        SpecialAccount specialAccount = new SpecialAccount(526565, 2565);
+        Account account = new Account("52464548445698", 500);
+        SpecialAccount specialAccount = new SpecialAccount("52665423125565", 2565);
 
         // Display accounts information
         System.out.println(account);
