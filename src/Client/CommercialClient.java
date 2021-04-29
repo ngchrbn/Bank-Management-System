@@ -37,7 +37,7 @@ public class CommercialClient extends Client {
      * Gets commercialID
      * @return commercialID
      */
-    public String getCommercialID() {
+    public String getID() {
         return commercialID;
     }
 
@@ -49,7 +49,7 @@ public class CommercialClient extends Client {
     public String toString() {
         return "\nClient Type: CommercialClient" +
                 "\nName: " + getName() +
-                "\nCommercial ID: " + getCommercialID() +
+                "\nCommercial ID: " + getID() +
                 "\nAddress: " + getAddress() +
                 "\nTelephone Number: " + getPhone();
     }
