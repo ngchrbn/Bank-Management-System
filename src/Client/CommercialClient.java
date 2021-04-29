@@ -10,7 +10,7 @@ import Account.Account;
  * @version 1.00 2021/04/22
  */
 public class CommercialClient extends Client {
-    private long commercialID;
+    private String commercialID;
 
     /**
      * Constructs a new CommercialClient with params:
@@ -20,8 +20,8 @@ public class CommercialClient extends Client {
      * @param phone company's telephone number
      * @param account company's account
      */
-    public CommercialClient(String name, long commercialID, String address, String phone, Account account) {
-        super(name, 00000000000000L, address, phone, account); // Calls Client Constructor
+    public CommercialClient(String name, String commercialID, String address, String phone, Account account) {
+        super(name, "00000000000000", address, phone, account); // Calls Client Constructor
         setCommercialID(commercialID);
     }
 
@@ -29,7 +29,7 @@ public class CommercialClient extends Client {
      * Sets commercialID
      * @param commercialID company's commercial ID
      */
-    public void setCommercialID(long commercialID) {
+    public void setCommercialID(String commercialID) {
         this.commercialID = commercialID;
     }
 
@@ -37,7 +37,7 @@ public class CommercialClient extends Client {
      * Gets commercialID
      * @return commercialID
      */
-    public long getCommercialID() {
+    public String getCommercialID() {
         return commercialID;
     }
 

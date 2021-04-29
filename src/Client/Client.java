@@ -8,7 +8,7 @@ import Account.Account;
  */
 public class Client {
     private String name;
-    private long nationalID;
+    private String nationalID;
     private  String address;
     private String phone;
     private Account account;
@@ -21,7 +21,7 @@ public class Client {
      * @param phone client's telephone number
      * @param account client's account
      */
-    public Client(String name, long nationalID, String address, String phone, Account account) {
+    public Client(String name, String nationalID, String address, String phone, Account account) {
         setName(name);
         setNationalID(nationalID);
         setAddress(address);
@@ -41,7 +41,7 @@ public class Client {
      * Sets nationalID
      * @param nationalID client's national ID
      */
-    public void setNationalID(long nationalID) {
+    public void setNationalID(String nationalID) {
         this.nationalID = nationalID;
     }
 
@@ -81,7 +81,7 @@ public class Client {
      * Returns nationalID
      * @return nationalID
      */
-    public long getNationalID() {
+    public String getNationalID() {
         return nationalID;
     }
 
