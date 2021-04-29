@@ -4,8 +4,8 @@ import Account.Account;
 
 public class TestClient {
     public static void main(String[] args) {
-        Account account = new Account(25478688, 15000);
-        Account commercialAccount = new Account(25616564, 250365);
+        Account account = new Account("25479858968688", 15000);
+        Account commercialAccount = new Account("25741295616564", 250365);
         Client client = new Client("Guy Cherubin", 12254125458654L,
                 "Dokki Gizah", "01228331194", account);
 

@@ -14,7 +14,7 @@ public class SpecialAccount extends Account{
      * @param account_number account number of the client
      * @param balance initial balance of the client
      */
-    public SpecialAccount(long account_number, double balance) {
+    public SpecialAccount(String account_number, double balance) {
         super(account_number, balance); // Calls Account constructor
     }
 

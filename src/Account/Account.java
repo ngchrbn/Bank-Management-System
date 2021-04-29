@@ -6,7 +6,7 @@ package Account;
  * @version 1.00 2021/04/22
  */
 public class Account {
-    private long account_number;
+    private String account_number;
     private double balance;
 
     /**
@@ -15,7 +15,7 @@ public class Account {
      * @param account_number account number of the client
      * @param balance initial balance of the client
      */
-    public Account(long account_number, double balance) {
+    public Account(String account_number, double balance) {
         setAccountNumber(account_number);
         setBalance(balance);
     }
@@ -24,7 +24,7 @@ public class Account {
      * Returns the account number
      * @return account_number
      */
-    public long getAccountNumber() {
+    public String getAccountNumber() {
         return account_number;
     }
 
@@ -40,7 +40,7 @@ public class Account {
      * Sets the client's account number
      * @param account_number account number of the client
      */
-    public void setAccountNumber(long account_number) {
+    public void setAccountNumber(String account_number) {
         this.account_number = account_number;
     }
 
