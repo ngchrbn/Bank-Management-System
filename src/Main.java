@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static final Bank bank = new Bank("BGF", "New Cairo", "01023331144"); // Initialize bank object
+    private static final Bank bank = new Bank("MISR Bank", "New Cairo", "01023331144"); // Initialize bank object
     public static void main(String[] args) {
         System.out.printf("%60s%n%n","********Bank Management System********");
         displayMenu();
@@ -38,6 +38,15 @@ public class Main {
                 System.out.print("Commercial ID: ");
             }
             String id = input.next();
+            while (id.length() != 14) {
+                System.out.println("\n==>The ID must be 14 characters long!");
+                if (clientType == 1) {
+                    System.out.print("National ID: ");
+                } else {
+                    System.out.print("Commercial ID: ");
+                }
+                id = input.next();
+            }
             System.out.print("Address: ");
             String address = input.next();
             System.out.print("Telephone number: ");
@@ -46,9 +55,18 @@ public class Main {
             int accountType = getAccountType();
             System.out.print("\nAccount Number: ");
             String accountNumber = input.next();
+            while (accountNumber.length() != 14) {
+                System.out.println("\n==>The account number must be 14 characters long!");
+                System.out.print("Account Number: ");
+                accountNumber = input.next();
+            }
             System.out.print("Account balance: ");
             double balance = input.nextDouble();
-
+            while (balance < 0) {
+                System.out.println("\n==>Balance can't be negative!");
+                System.out.print("Account balance: ");
+                balance = input.nextDouble();
+            }
             // Initialize account object
             Account account;
 
