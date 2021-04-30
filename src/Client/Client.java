@@ -115,7 +115,7 @@ public class Client {
      */
     @Override
     public String toString() {
-        return "\nClient Type: Client" +
+        return "\nClient Type: " + getClass().getSimpleName() +
                 "\nName: " + getName() +
                 "\nNational ID: " + getID() +
                 "\nAddress: " + getAddress() +
