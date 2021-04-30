@@ -3,7 +3,7 @@ package Account;
 /**
  * This represents Account with two attributes: account_number and balance
  * @author Ntajugumba Guy Cherubin
- * @version 1.00 2021/04/22
+ * @version 1.0
  */
 public class Account {
     private String account_number;

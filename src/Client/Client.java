@@ -3,8 +3,8 @@ package Client;
 import Account.Account;
 /**
  * This represents Client with attributes name, nationalID, address, phone and account
- * @author Ntajugumba Guy Cherubin
- * @version 1.00 2021/04/22
+ * @author Kangana Alain
+ * @version 1.0
  */
 public class Client {
     private String name;

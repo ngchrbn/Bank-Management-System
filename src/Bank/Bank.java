@@ -8,7 +8,8 @@ import java.util.Scanner;
 /**
  * This represents Bank with attributes: name, address and phone
  * @author Ntajugumba Guy Cherubin
- * @version 1.00 2021/04/22
+ * @author Kangana Alain
+ * @version 1.0
  */
 public class Bank {
     private String name;

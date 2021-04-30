@@ -4,7 +4,7 @@ package Account;
  * with maximum limit of 1000 LE. It is inherited from Account
  * @see Account
  * @author Ntajugumba Guy Cherubin
- * @version 1.00 2021/04/22
+ * @version 1.0
  */
 public class SpecialAccount extends Account{
 
