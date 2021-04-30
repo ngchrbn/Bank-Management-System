@@ -107,6 +107,12 @@ public class Bank {
         }
     }
 
+    /**
+     * SignIn a user to get access to view balance, deposit or withdraw a given amount.
+     * Checks if the user exists in clients ArrayList, if yes goto next step, otherwise output an error message.
+     * After, get the user index from clients ArrayList to be used in accounts ArrayList, to view balance, deposit or withdraw
+     * @param clientID client's identification
+     */
     public void signIn(String clientID) {
         if (!clientExists(clientID)) {
             System.out.println("\n==>Client ID Not Found!");
