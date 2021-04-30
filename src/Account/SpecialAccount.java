@@ -22,21 +22,27 @@ public class SpecialAccount extends Account{
 
     /**
      * Withdraws given balance from account
-     * @param balance balance to be withdrawn
+     * @param amount balance to be withdrawn
      */
     @Override
     public void withdraw(double amount) {
-        if (amount == (0-MAXIMUMDRAFT)) {
-            System.out.println("Pay first the loan of 1000LE");
-        } else if (amount > balance){
-            if (amount > (amount + MAXIMUMDRAFT)) {
-                System.out.println("Maximum Draft is 1000LE");
-            } else {
-                this.balance -= balance;
-                System.out.println("Amount withdrawn successfully");
-            }
+        if (amount < 0)  {
+            System.out.println("\n==>Negative amount can't be withdrawn!");
         } else {
-            this.balance -= balance;
+            if (getBalance() == (-MAXIMUMDRAFT)) {
+                System.out.println("\n==>Your balance is -1000LE. \n" +
+                        "==>Deposit first to be able to withdraw");
+            } else if (amount > getBalance()){
+                if (-(-amount + getBalance()) > MAXIMUMDRAFT) {
+                    System.out.println("\n==>Your are allowed only a maximum over draft of 1000LE");
+                } else {
+                    setBalance(this.balance -= amount);
+                    System.out.printf("%.2fLE has been withdrawn from the account%n", amount);
+                }
+            } else {
+                setBalance(this.balance -= amount);
+                System.out.printf("%.2fLE has been withdrawn from the account%n", amount);
+            }
         }
     }
 }

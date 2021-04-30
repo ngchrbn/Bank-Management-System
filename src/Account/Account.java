@@ -60,7 +60,7 @@ public class Account {
     public String toString() {
         return "\nAccount Type: " + getClass().getSimpleName() +
                 "\nAccount Number: " + getAccountNumber() +
-                "\nBalance=: " + getBalance() + " LE\n\n";
+                "\nBalance: " + getBalance() + " LE\n";
     }
 
     /**
@@ -69,13 +69,14 @@ public class Account {
      */
     public void withdraw(double balance) {
         if (balance < 0) {
-            System.out.println("Negative Balance can't be withdrawn!");
+            System.out.println("\n==>Negative Balance can't be withdrawn!");
         } else {
             if (balance > this.balance) {
-                System.out.println("Sorry! Not enough balance!");
+                System.out.println("\n==>Sorry! Not enough balance!");
             }
             else {
                 this.balance -= balance;
+                System.out.printf("%.2fLE has been withdrawn from the account%n", balance);
             }
         }
     }

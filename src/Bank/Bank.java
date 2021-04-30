@@ -91,7 +91,7 @@ public class Bank {
      */
     public void displayClient() {
         if (clients.size() == 0) {
-            System.out.println("Empty!");
+            System.out.println("\n==>No Clients / Accounts found in the database!");
         }
         else {
             int counter = 0;
@@ -109,24 +109,29 @@ public class Bank {
 
     public void signIn(String clientID) {
         if (!clientExists(clientID)) {
-            System.out.print("Account Number Not Found!");
+            System.out.println("\n==>Client ID Not Found!");
         } else {
             Scanner input = new Scanner(System.in);
             int clientIndex = getClientIndex(clientID);
-            System.out.println("1. Deposit\n" +
-                    "2. Withdraw");
-            System.out.print("Your choice (1 - 2): ");
+            System.out.println("\n1. View Balance\n" +
+                            "2. Deposit\n" +
+                    "3. Withdraw");
+            System.out.print("Your choice (1 - 3): ");
             int choice = input.nextInt();
-            while (choice != 1 && choice != 2) {
+            while (choice != 1 && choice != 2 && choice != 3) {
                 System.out.println("Wrong Choice!");
-                System.out.print("Your choice (1 - 2): ");
+                System.out.print("Your choice (1 - 3): ");
                 choice = input.nextInt();
             }
             if (choice == 1) {
+                System.out.printf("%n==>Your Account balance is: %.2fLE%n",
+                        accounts.get(clientIndex).getBalance());
+            }
+            else if (choice == 2) {
                 System.out.print("Enter Amount to deposit: ");
                 double amount = input.nextDouble();
                 accounts.get(clientIndex).deposit(amount);
-                System.out.printf("%.2fLE has been deposit to your account successfully", amount);
+                System.out.printf("%n==>%.2fLE has been deposit to your account successfully%n", amount);
             } else {
                 System.out.print("Enter Amount to withdraw: ");
                 double amount = input.nextDouble();
