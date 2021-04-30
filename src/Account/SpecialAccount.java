@@ -7,6 +7,8 @@ package Account;
  * @version 1.00 2021/04/22
  */
 public class SpecialAccount extends Account{
+
+    private final int MAXIMUMDRAFT = 1000;
     /**
      * Constructs an new SpecialAccount with account number and balance
      * and assigns them to the new SpecialAccount
@@ -23,15 +25,18 @@ public class SpecialAccount extends Account{
      * @param balance balance to be withdrawn
      */
     @Override
-    public void withdraw(double balance) {
-        if (balance > getBalance()) {
-            System.out.println("Sorry! Not enough balance!");
-        }
-        else if (balance > 1000) {
-            System.out.println("Sorry! Maximum withdraw is 1000 L.E");
-        }
-        else {
-            super.withdraw(balance);
+    public void withdraw(double amount) {
+        if (amount == (0-MAXIMUMDRAFT)) {
+            System.out.println("Pay first the loan of 1000LE");
+        } else if (amount > balance){
+            if (amount > (amount + MAXIMUMDRAFT)) {
+                System.out.println("Maximum Draft is 1000LE");
+            } else {
+                this.balance -= balance;
+                System.out.println("Amount withdrawn successfully");
+            }
+        } else {
+            this.balance -= balance;
         }
     }
 }

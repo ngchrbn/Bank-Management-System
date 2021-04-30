@@ -126,7 +126,11 @@ public class Bank {
                 System.out.print("Enter Amount to deposit: ");
                 double amount = input.nextDouble();
                 accounts.get(clientIndex).deposit(amount);
-                System.out.printf("%dLE has been deposit to your account successfully", amount);
+                System.out.printf("%.2fLE has been deposit to your account successfully", amount);
+            } else {
+                System.out.print("Enter Amount to withdraw: ");
+                double amount = input.nextDouble();
+                accounts.get(clientIndex).withdraw(amount);
             }
         }
     }

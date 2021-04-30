@@ -17,12 +17,13 @@ public class Main {
         input.useDelimiter("\n");
         System.out.println("1. Add a new client\n" +
                 "2. Display existing clients\n" +
-                "3. Exit");
-        System.out.print("Your choice (1 - 3): ");
+                "3. Withdraw / Deposit\n" +
+                "4. Exit");
+        System.out.print("Your choice (1 - 4): ");
         int choice = input.nextInt();
-        while (choice != 1 && choice != 2 && choice != 3) {
+        while (choice != 1 && choice != 2 && choice != 3 && choice != 4) {
             System.out.println("Wrong Choice !");
-            System.out.print("Your choice (1 - 3): ");
+            System.out.print("Your choice (1 - 4): ");
             choice = input.nextInt();
         }
         if (choice == 1) {
@@ -80,6 +81,11 @@ public class Main {
         }
         else if (choice == 2){
             bank.displayClient();
+            displayMenu();
+        } else if (choice == 3) {
+            System.out.print("Enter your client identification: ");
+            String clientID = input.next();
+            bank.signIn(clientID);
             displayMenu();
         }
         else {
