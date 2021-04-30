@@ -3,7 +3,7 @@ package Client;
 import Account.Account;
 /**
  * This represents Client with attributes name, nationalID, address, phone and account
- * @author Kangana Alain
+ * @author Kangana Alain 20160318
  * @version 1.0
  */
 public class Client {

@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 /**
  * This represents Bank with attributes: name, address and phone
- * @author Ntajugumba Guy Cherubin
- * @author Kangana Alain
+ * @author Ntajugumba Guy Cherubin 20160379
+ * @author Kangana Alain 20160318
  * @version 1.0
  */
 public class Bank {

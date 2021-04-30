@@ -2,7 +2,7 @@ package Account;
 
 /**
  * This represents Account with two attributes: account_number and balance
- * @author Ntajugumba Guy Cherubin
+ * @author Ntajugumba Guy Cherubin 20160379
  * @version 1.0
  */
 public class Account {

@@ -6,7 +6,7 @@ import Account.Account;
  * name, commercialID, address, phone and account
  * It represents a company. It inherits Client class
  * @see Client
- * @author Kangana Alain
+ * @author Kangana Alain 20160318
  * @version 1.0
  */
 public class CommercialClient extends Client {

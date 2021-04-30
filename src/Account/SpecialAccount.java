@@ -3,7 +3,7 @@ package Account;
  * This represents SpecialAccount that allows over drafting
  * with maximum limit of 1000 LE. It is inherited from Account
  * @see Account
- * @author Ntajugumba Guy Cherubin
+ * @author Ntajugumba Guy Cherubin 20160379
  * @version 1.0
  */
 public class SpecialAccount extends Account{
