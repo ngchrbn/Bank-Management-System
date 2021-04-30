@@ -21,7 +21,7 @@ public class SpecialAccount extends Account{
     }
 
     /**
-     * Withdraws given balance from account
+     * Withdraws given balance from account with maximum over draft of 1000
      * @param amount balance to be withdrawn
      */
     @Override
